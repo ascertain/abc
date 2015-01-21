@@ -1,0 +1,19 @@
+﻿@model MvcApplication4.Models.LoginDetails
+
+@using (Html.BeginForm( "details", "Country" , FormMethod.Post))
+<html>
+<head>
+    <title>
+        Login Form
+    </title>
+</head>
+<body>
+    <div>
+    @Html TextBoxFor(Model => Model.UserName)
+    </div>
+    <div>
+     @Html TextBoxFor(Model => Model.Password)
+    </div>
+    
+</body>
+</html>

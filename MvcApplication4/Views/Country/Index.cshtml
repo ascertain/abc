@@ -1,0 +1,34 @@
+﻿@model MvcApplication4.Models.LoginDetails
+@{ 
+    ViewBag.Title = "Login Form"; 
+}
+
+@using (Html.BeginForm("details", "Country", FormMethod.Post))
+{ 
+    <body>
+        
+
+        <div style="background-color: #48B960; width: 400px; margin: 0 auto">
+            <h2 style="color: #0086DC; margin-left: 150px; font-weight: bold; ">Home</h2>
+            <div>
+                <p style="color: #FF9900; font-weight: bold; ">UserName:</p>
+                <div>
+                    @Html.TextBoxFor(model => model.UserName)
+                    @Html.ValidationMessageFor(model => model.UserName)
+                </div>
+                <p style="color: #FF9900; font-weight: bold; ">Password:</p>
+                <div>
+                    @Html.PasswordFor(x => x.Password)
+                    @Html.ValidationMessageFor(model => model.Password)
+                </div>
+                @ViewBag.message
+
+                <div>
+                    <input style="border-radius:15px; color:brown;margin:15px;background-color:cornflowerblue" type="submit" value="Login" />
+                </div>
+                
+
+            </div>
+        </div>
+    </body>
+}
